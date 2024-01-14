@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input {
+    @apply border-2 rounded-lg h-9 w-3/4 px-5 mx-10 sm:justify-self-center;
+}
+.label {
+    @apply text-xl font-semibold mx-10 sm:justify-self-center;
+}
