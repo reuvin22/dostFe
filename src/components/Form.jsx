@@ -34,7 +34,7 @@ function Form() {
         <div className="flex items-center justify-center w-screen h-screen border-yellow border-8 border-orange-500">
           <form className='grid border-slate-500 
           sm:w-11/12 md:w-2/4 lg:w-2/4 xl:w-96 
-          sm:h-11/12 xl:h-4/6 border-2 rounded-lg gap-2' onSubmit={handleSubmit}>
+          sm:h-11/12 xl:h-5/6 border-2 rounded-lg' onSubmit={handleSubmit}>
             <legend className='text sm:text-2xl md:text-3xl xl:text-3xl font-bold text-blue-500 place-self-center my-6'>DOST ATTENDANCE</legend>
             <label className='label' htmlFor="fname">First Name</label>
             <input type="text" name='firstName' className='input' value={formData.firstName} onChange={handleInput}/>
