@@ -26,6 +26,7 @@ function Form() {
     const handleSubmit = async (event) => {
       event.preventDefault();
       try {
+          // const response = await axios.post('http://localhost:8000/api/attendance', formData, {'Content-type': 'application/json'});
           const response = await axios.post('https://atsdevs.org/dost/public/api/attendance', formData, {'Content-type': 'application/json'});
           console.log(response.data);
       } catch (err) {

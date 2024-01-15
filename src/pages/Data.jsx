@@ -7,7 +7,8 @@ function Data() {
     useEffect(() => {
         const fetchData = async () => {
             try{
-                const response = await axios.get('http://localhost:8000/api/attendance', numbers);
+                // const response = await axios.get('http://localhost:8000/api/attendance', numbers);
+                const response = await axios.get('https://atsdevs.org/dost/public/api/attendance', numbers);
                 setNumbers(response.data);
                 console.log(response.data);
             }catch(err){

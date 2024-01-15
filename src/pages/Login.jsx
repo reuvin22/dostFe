@@ -11,6 +11,7 @@ function Login() {
     email: '',
     password: ''
   });
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const handleChange = (event) => {
     event.preventDefault();
@@ -24,6 +25,11 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+    //   const response = await axios.post('http://localhost:8000/api/login', login, {
+    //     headers: {
+    //     'Content-Type': 'application/json'
+    //     }
+    //   });
       const response = await axios.post('https://atsdevs.org/dost/public/api/login', login, {
         headers: {
         'Content-Type': 'application/json'
@@ -34,16 +40,16 @@ function Login() {
       localStorage.setItem('token', apiToken);
       navigate('/attendance');
     } catch (err) {
-      console.error(err);
+      setError(err.response.data.message);
     }
   };
-
   return (
     <>
       <div className='grid place-items-center w-screen h-screen'>
         <div className='grid place-items-center border-2 border-cyan-700 xl:w-4/12 h-1/2 rounded-3xl'>
           <form onSubmit={handleSubmit} className='grid place-items-center'>
             <h1 className='text-3xl font-bold text-blue-500'>ADMIN LOGIN</h1>
+            <h3 className='text-red-500 font-bold'>{error}</h3>
             <Label
               htmlFor="email"
               label="Email"
