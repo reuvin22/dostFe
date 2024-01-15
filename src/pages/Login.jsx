@@ -13,6 +13,7 @@ function Login() {
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
   const handleChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
@@ -45,15 +46,15 @@ function Login() {
   };
   return (
     <>
-      <div className='grid place-items-center w-screen h-screen'>
-        <div className='grid place-items-center border-2 border-cyan-700 xl:w-4/12 h-1/2 rounded-3xl'>
+      <div className='grid place-items-center w-screen h-screen bg-cyan-600'>
+        <div className='grid place-items-center border-2 border-white xl:w-4/12 h-1/2 rounded-3xl'>
           <form onSubmit={handleSubmit} className='grid place-items-center'>
-            <h1 className='text-3xl font-bold text-blue-500'>ADMIN LOGIN</h1>
-            <h3 className='text-red-500 font-bold'>{error}</h3>
+            <h1 className='text-3xl font-bold text-white'>ADMIN LOGIN</h1>
+            <h3 className='messageError'>{error}</h3>
             <Label
               htmlFor="email"
               label="Email"
-              className="text-2xl my-2"
+              className="text-2xl my-2 text-white"
             />
             <Input
               type="text"
@@ -65,7 +66,7 @@ function Login() {
             <Label
               htmlFor="password"
               label="Password"
-              className="text-2xl my-2 mx-2"
+              className="text-2xl my-2 mx-2 text-white"
             />
             <Input
               type="password"
@@ -79,7 +80,7 @@ function Login() {
               name='submit'
               btnName='Login'
             />
-            <Link to="/">Back to Form</Link>
+            <Link to="/" className='text-white text-xl font-bold hover:text-blue-800'>Back to Form</Link>
           </form>
         </div>
       </div>

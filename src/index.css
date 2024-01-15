@@ -4,16 +4,21 @@
 
 .input {
     @apply border-2 rounded-lg h-9 w-3/4 px-5 mx-10 
-    sm:justify-self-center;
+    sm:justify-self-center
 }
 .label {
-    @apply text-xl font-semibold mx-10 sm:justify-self-center;
+    @apply 
+    text-xl 
+    text-white
+    font-semibold 
+    mx-10 
+    sm:justify-self-center;
 }
 .legend {
     @apply sm:text-2xl 
     text-2xl
     font-bold
-     text-blue-500 
+     text-white 
      place-self-center 
      my-6;
 }
@@ -28,6 +33,7 @@
     border
     border-cyan-600
     rounded-lg
+    bg-cyan-600
 }
 .button {
     @apply
@@ -40,4 +46,17 @@
      text-white 
     font-semibold
     hover:bg-blue-300 transition-all
+}
+
+.messageSuccess {
+    @apply 
+    justify-self-center 
+    font-bold
+     text-green-500
+}
+.messageError {
+    @apply 
+    justify-self-center 
+    font-bold
+     text-red-500
 }

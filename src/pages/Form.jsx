@@ -15,6 +15,7 @@ function Form() {
     gender: '',
     grade: ''
   });
+  const [message, setMessage] = useState("");
 
   const handleInput = (event) => {
     const { name, value } = event.target;
@@ -23,22 +24,23 @@ function Form() {
       [name]: value
     }));
   }
+
     const handleSubmit = async (event) => {
       event.preventDefault();
       try {
           // const response = await axios.post('http://localhost:8000/api/attendance', formData, {'Content-type': 'application/json'});
           const response = await axios.post('https://atsdevs.org/dost/public/api/attendance', formData, {'Content-type': 'application/json'});
-          console.log(response.data);
+          setMessage(response.data.message);
       } catch (err) {
           console.error(err);
       }
   }
-
   return (
     <>
-        <div className="flex items-center justify-center w-screen h-screen border-yellow border-8 border-orange-500">
+        <div className="flex items-center justify-center w-screen h-screen border-yellow bg-blue-500">
           <form className='form' onSubmit={handleSubmit}>
             <legend className='legend'>DOST STUDENT ATTENDANCE</legend>
+            <h3 className='messageSuccess'>{message}</h3>
             <Label 
               htmlFor="firstName"
               label="First Name"
@@ -128,7 +130,7 @@ function Form() {
                 name='submit'
                 btnName='Submit'
               />
-            <Link to="/login" className='justify-self-center text-xl hover:text-blue-900 font-bold'>Login</Link>
+            <Link to="/login" className='justify-self-center text-xl text-white hover:text-blue-900 font-bold my-2'>Login</Link>
           </form>
         </div>
     </>
