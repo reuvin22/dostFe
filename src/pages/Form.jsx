@@ -39,7 +39,7 @@ function Form() {
     <>
         <div className="flex items-center justify-center w-screen h-screen border-yellow bg-blue-500">
           <form className='form' onSubmit={handleSubmit}>
-            <legend className='legend'>DOST STUDENT ATTENDANCE</legend>
+            <legend className='legend'>DOST SCIENCE FAIR ATTENDANCE</legend>
             <h3 className='messageSuccess'>{message}</h3>
             <Label 
               htmlFor="firstName"

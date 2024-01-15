@@ -26,11 +26,11 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-    //   const response = await axios.post('http://localhost:8000/api/login', login, {
-    //     headers: {
-    //     'Content-Type': 'application/json'
-    //     }
-    //   });
+      // const response = await axios.post('http://localhost:8000/api/login', login, {
+      //   headers: {
+      //   'Content-Type': 'application/json'
+      //   }
+      // });
       const response = await axios.post('https://atsdevs.org/dost/public/api/login', login, {
         headers: {
         'Content-Type': 'application/json'
@@ -46,8 +46,8 @@ function Login() {
   };
   return (
     <>
-      <div className='grid place-items-center w-screen h-screen bg-cyan-600'>
-        <div className='grid place-items-center border-2 border-white xl:w-4/12 h-1/2 rounded-3xl'>
+      <div className='grid place-items-center w-screen h-screen bg-blue-500'>
+        <div className='grid place-items-center border-2 border-white xl:w-4/12 h-1/2 rounded-3xl bg-cyan-500'>
           <form onSubmit={handleSubmit} className='grid place-items-center'>
             <h1 className='text-3xl font-bold text-white'>ADMIN LOGIN</h1>
             <h3 className='messageError'>{error}</h3>

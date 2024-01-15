@@ -21,6 +21,7 @@
      text-white 
      place-self-center 
      my-6;
+     text-align: center
 }
 .form {
     @apply 
@@ -33,7 +34,7 @@
     border
     border-cyan-600
     rounded-lg
-    bg-cyan-600
+    bg-cyan-500
 }
 .button {
     @apply

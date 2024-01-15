@@ -26,13 +26,14 @@ function Data() {
   }
   return (
     <>
-      <div className='grid place-items-center w-screen h-screen bg-cyan-600'>
+      <div className='grid place-items-center w-screen h-screen bg-blue-500'>
         <div className='grid place-items-center 
         xl:w-2/5 xl:h-4/5 
         sm:w-4/5 md:w-3/5 lg:w-2/5
-        border-2 border-white rounded-lg'>
+        border-2 border-white rounded-lg
+        bg-cyan-500'>
             <img src={Logo} alt="DOST Logo" className='h-20 w-30'/>
-            <h1 className='text-2xl font-bold my-6 text-white'>DOST ATTENDANCE</h1>
+            <h1 className='text-3xl text-center font-bold my-6 text-white'>DOST SCIENCE FAIR ATTENDEE</h1>
             <ul className='grid gap-11'>
                 {Object.entries(numbers).map(([key, value], index) => (
                     <li key={index} className='text-2xl font-semibold text-white'>{key} : {value}</li>
