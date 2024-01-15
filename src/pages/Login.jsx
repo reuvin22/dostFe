@@ -24,7 +24,7 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/login', login, {
+      const response = await axios.post('https://atsdevs.org/dost/public/api/login', login, {
         headers: {
         'Content-Type': 'application/json'
         }
