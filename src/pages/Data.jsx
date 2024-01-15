@@ -69,7 +69,7 @@ function Data() {
         <div className='grid place-items-center 
         sm:w-screen
         xl:w-4/12
-        xl:h-1/2
+        xl:h-4/12
         border-2 border-white rounded-lg
         bg-cyan-500'>
             <img src={Logo} alt="DOST Logo" className='h-20 w-30'/>
