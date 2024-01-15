@@ -33,10 +33,10 @@ function Data() {
         border-2 border-white rounded-lg
         bg-cyan-500'>
             <img src={Logo} alt="DOST Logo" className='h-20 w-30'/>
-            <h1 className='text-3xl text-center font-bold my-6 text-white'>DOST SCIENCE FAIR ATTENDEE</h1>
-            <ul className='grid gap-11'>
+            <h1 className='sm:text-2xl text-3xl text-center font-bold my-6 text-white'>DOST SCIENCE FAIR ATTENDEE</h1>
+            <ul className='grid gap-11 '>
                 {Object.entries(numbers).map(([key, value], index) => (
-                    <li key={index} className='text-2xl font-semibold text-white'>{key} : {value}</li>
+                    <li key={index} className='text-2xl sm:text-xl font-semibold text-white'>{key} : {value}</li>
                 ))}
             </ul>
             <button className='bg-blue-600 text-white h-11 w-48 my-6 hover:bg-red-600 transition-all rounded-lg' onClick={handleLogout}>Logout</button>

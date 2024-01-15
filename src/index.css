@@ -18,10 +18,11 @@
     @apply sm:text-2xl 
     text-2xl
     font-bold
-     text-white 
-     place-self-center 
-     my-6;
-     text-align: center
+  text-white 
+    place-self-center 
+    my-6
+    sm:text-xl
+    text-center;
 }
 .form {
     @apply 

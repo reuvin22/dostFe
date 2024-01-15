@@ -47,7 +47,10 @@ function Login() {
   return (
     <>
       <div className='grid place-items-center w-screen h-screen bg-blue-500'>
-        <div className='grid place-items-center border-2 border-white xl:w-4/12 h-1/2 rounded-3xl bg-cyan-500'>
+        <div className='grid place-items-center border-2 border-white rounded-3xl bg-cyan-500
+        xl:w-4/12
+        xl:h-1/2
+        2xl:h-96'>
           <form onSubmit={handleSubmit} className='grid place-items-center'>
             <h1 className='text-3xl font-bold text-white'>ADMIN LOGIN</h1>
             <h3 className='messageError'>{error}</h3>

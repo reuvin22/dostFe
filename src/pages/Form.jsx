@@ -31,6 +31,15 @@ function Form() {
           // const response = await axios.post('http://localhost:8000/api/attendance', formData, {'Content-type': 'application/json'});
           const response = await axios.post('https://atsdevs.org/dost/public/api/attendance', formData, {'Content-type': 'application/json'});
           setMessage(response.data.message);
+          setFormData({
+            firstName: '',
+            lastName: '',
+            school: '',
+            age: '',
+            contactNumber: '',
+            gender: '',
+            grade: ''
+          });
       } catch (err) {
           console.error(err);
       }
