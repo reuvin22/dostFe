@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../img/DOST.png'
@@ -9,27 +9,26 @@ function Data() {
   const [notif, setNotif] = useState('');
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
+  const prevNumbersRef = useRef();
+
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        // const response = await axios.get('http://localhost:8000/api/attendance', {
-        //   headers: {
-        //     'Authorization': `Bearer ${token}`
-        //   }
-        // });
-        const response = await axios.get('https://atsdevs.org/dost/public/api/attendance', {
+        await axios.get('https://atsdevs.org/dost/public/api/attendance', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
+        })
+        .then(res => {
+          setNumbers(res.data.data);
+          console.log(res.data.data)
+        })
+        .catch(err =>{
+          console.log(err);
         });
-        setNumbers(response.data.data);
-      } catch (err) {
-        console.error(err);
       }
-    };
-
     fetchData();
-  }, []);
+  }, [token, reset]); 
+  
   const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/login');
@@ -60,7 +59,7 @@ function Data() {
     <>
       <div className='grid place-items-center w-screen h-screen bg-blue-500'>
       <div className={reset ? 'resetNotif block' :'hidden' }>
-        <h1 className='grid place-items-center text-2xl text-center'>Are you sure you want to reset the data?</h1>
+        <h1 className='grid place-items-center text-2xl text-center sm:text-xl'>Are you sure you want to reset the data?</h1>
         <div className='flex gap-2 justify-center'>
           <button className='bg-blue-600 text-white h-11 w-36 my-6 hover:bg-green-600 transition-all rounded-lg' onClick={resetNotif}>Back</button>
           <button className='bg-blue-600 text-white h-11 w-36 my-6 hover:bg-red-600 transition-all rounded-lg' onClick={deleteData}>Reset</button>
