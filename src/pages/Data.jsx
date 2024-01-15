@@ -29,7 +29,7 @@ function Data() {
     };
 
     fetchData();
-  }, [numbers]);
+  }, []);
   const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/login');
@@ -67,8 +67,9 @@ function Data() {
         </div>
       </div>
         <div className='grid place-items-center 
-        xl:w-2/5 xl:h-4/5 
-        sm:w-4/5 md:w-3/5 lg:w-2/5
+        sm:w-screen
+        xl:w-4/12
+        xl:h-1/2
         border-2 border-white rounded-lg
         bg-cyan-500'>
             <img src={Logo} alt="DOST Logo" className='h-20 w-30'/>
