@@ -23,7 +23,6 @@ function Data() {
           }
         });
         setNumbers(response.data.data);
-        console.log(response.data.data);
       } catch (err) {
         console.error(err);
       }
@@ -77,7 +76,7 @@ function Data() {
             <h1 className='font-bold text-red-800'>{notif}</h1>
             <ul className='grid gap-11 '>
                 {Object.entries(numbers).map(([key, value], index) => (
-                    <li key={index} className='text-2xl sm:text-xl font-semibold text-white'>{key} : {value}</li>
+                    <li key={index} className='text-2xl sm:text-xl font-semibold text-white'>{key} : {value === null ? 0 : value}</li>
                 ))}
             </ul>
             <div className='flex gap-5'>
