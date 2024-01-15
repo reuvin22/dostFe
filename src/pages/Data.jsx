@@ -82,7 +82,7 @@ function Data() {
             </ul>
             <div className='flex gap-5'>
               <button className='bg-blue-600 text-white h-11 w-48 my-6 hover:bg-blue-300 transition-all rounded-lg' onClick={handleLogout}>Logout</button>
-              <button className='bg-red-600 text-white h-11 w-48 my-6 hover:bg-red-300 transition-all rounded-lg' onClick={resetNotif}>Reset</button>
+              <button className='bg-red-600 text-white h-11 w-3/4 my-6 hover:bg-red-300 transition-all rounded-lg' onClick={resetNotif}>Reset</button>
             </div>
         </div>
       </div>
