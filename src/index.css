@@ -62,3 +62,12 @@
     font-bold
      text-red-500
 }
+.resetNotif {
+    @apply
+    border 
+    h-36 
+    w-96 
+    absolute 
+    bg-white 
+    rounded-md
+}
