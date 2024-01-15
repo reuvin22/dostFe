@@ -5,13 +5,13 @@ import Button from '../components/Button'
 import Form from './Form'
 import { useState } from 'react'
 import axios from 'axios'; // Don't forget to import axios
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 function Login() {
   const [login, setLogin] = useState({
     email: '',
     password: ''
   });
-
+  const navigate = useNavigate();
   const handleChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
@@ -25,11 +25,14 @@ function Login() {
     event.preventDefault();
     try {
       const response = await axios.post('http://localhost:8000/api/login', login, {
+        headers: {
         'Content-Type': 'application/json'
+        }
       });
       console.log(response.data);
       const apiToken = response.data.token;
       localStorage.setItem('token', apiToken);
+      navigate('/attendance');
     } catch (err) {
       console.error(err);
     }

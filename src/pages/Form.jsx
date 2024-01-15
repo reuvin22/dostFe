@@ -125,7 +125,7 @@ function Form() {
             <Button 
                 className='button'
                 name='submit'
-                btnName='Login'
+                btnName='Submit'
               />
             <Link to="/login" className='justify-self-center text-xl hover:text-blue-900 font-bold'>Login</Link>
           </form>
