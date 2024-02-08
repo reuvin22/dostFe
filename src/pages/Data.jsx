@@ -13,7 +13,7 @@ function Data() {
 
   useEffect(() => {
     const fetchData = async () => {
-        await axios.get('https://atsdevs.org/dost/public/api/attendance', {
+        await axios.get('https://atsdevs.org/dost/public/api/v1/attendance', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
