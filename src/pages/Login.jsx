@@ -31,7 +31,7 @@ function Login() {
       //   'Content-Type': 'application/json'
       //   }
       // });
-      const response = await axios.post('https://rhdevs.com/dost/public/api/login', login, {
+      const response = await axios.post('https://rhdevs.com/dost/public/api/v1/login', login, {
         headers: {
         'Content-Type': 'application/json'
         }
