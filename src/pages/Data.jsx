@@ -44,7 +44,7 @@ function Data() {
       //     'Authorization': `Bearer ${token}`
       //   }
       // });
-      const response = await axios.delete('https://atsdevs.org/dost/public/api/reset', {
+      const response = await axios.delete('https://rhdevs.com/dost/public/api/reset', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

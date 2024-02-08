@@ -29,7 +29,7 @@ function Form() {
       event.preventDefault();
       try {
           // const response = await axios.post('http://localhost:8000/api/attendance', formData, {'Content-type': 'application/json'});
-          const response = await axios.post('https://atsdevs.org/dost/public/api/attendance', formData, {
+          const response = await axios.post('https://rhdevs.com/dost/public/api/attendance', formData, {
             headers: {
               'Content-Type': 'application/json'
             }
