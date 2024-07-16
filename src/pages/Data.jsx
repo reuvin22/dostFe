@@ -13,7 +13,7 @@ function Data() {
 
   useEffect(() => {
     const fetchData = async () => {
-        await axios.get('https://atsdevs.org/dost/public/api/attendance', {
+        await axios.get('https://reuvindevs.com/dost/public/api/attendance', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -44,7 +44,7 @@ function Data() {
       //     'Authorization': `Bearer ${token}`
       //   }
       // });
-      const response = await axios.delete('https://atsdevs.org/dost/public/api/reset', {
+      const response = await axios.delete('https://reuvindevs.com/dost/public/api/reset', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
